@@ -3,10 +3,10 @@
 
 # Simple helper to directly upload file to your model's media collections
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/opinion/simple-uploader.svg?style=flat-square)](https://packagist.org/packages/pinpon/simple-uploader)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/pinpon/laravel-medialibrary-uploader.svg?style=flat-square)](https://packagist.org/packages/pinpon/simple-uploader)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/pinpon-dev/simple-uploader/run-tests?label=tests)](https://github.com/pinpon/simple-uploader/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/pinpon-dev/simple-uploader/Check%20&%20fix%20styling?label=code%20style)](https://github.com/pinpon/simple-uploader/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/pinpon/simple-uploader.svg?style=flat-square)](https://packagist.org/packages/pinpon/simple-uploader)
+[![Total Downloads](https://img.shields.io/packagist/dt/pinpon/laravel-medialibrary-uploader.svg?style=flat-square)](https://packagist.org/packages/pinpon/simple-uploader)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
