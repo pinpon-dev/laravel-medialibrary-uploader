@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace PinPon\Uploader\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class UploaderCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'simple-uploader';
 
     public $description = 'My command';
 
