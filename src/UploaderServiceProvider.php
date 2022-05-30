@@ -2,7 +2,6 @@
 
 namespace PinPon\Uploader;
 
-use PinPon\Uploader\Commands\UploaderCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
