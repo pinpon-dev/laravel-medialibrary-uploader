@@ -1,5 +1,5 @@
 {
-    "name": "pinpon/simple-uploader",
+    "name": "pinpon/laravel-medialibrary-uploader",
     "description": "Simple helper to directly upload file to your model's media collections",
     "keywords": [
         "PinPon",
