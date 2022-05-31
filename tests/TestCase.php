@@ -63,7 +63,14 @@ class TestCase extends Orchestra
 
         TestModel::create(['name' => 'test']);
 
-        $mediaTableMigration = require(__DIR__ . '/../vendor/spatie/laravel-medialibrary/database/migrations/create_media_table.php.stub');
+        if (! class_exists(\CreateMediaTable::class)) {
+            $mediaTableMigration = require(__DIR__ . '/../vendor/spatie/laravel-medialibrary/database/migrations/create_media_table.php.stub');
+        }
+
+        if (! isset($mediaTableMigration) || is_int($mediaTableMigration)) {
+            $mediaTableMigration = new \CreateMediaTable();
+        }
+
 
         $mediaTableMigration->up();
     }
