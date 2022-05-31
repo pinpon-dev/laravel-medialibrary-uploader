@@ -1,62 +1,44 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
-# Simple helper to directly upload file to your model's media collections
+# A helper to directly upload files from request to laravel-medialibrary
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/pinpon/laravel-medialibrary-uploader.svg?style=flat-square)](https://packagist.org/packages/pinpon/simple-uploader)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/pinpon-dev/laravel-medialibrary-uploader/run-tests?label=tests)](https://github.com/pinpon/simple-uploader/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/pinpon-dev/laravel-medialibrary-uploader/Check%20&%20fix%20styling?label=code%20style)](https://github.com/pinpon/simple-uploader/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/pinpon/laravel-medialibrary-uploader.svg?style=flat-square)](https://packagist.org/packages/pinpon/simple-uploader)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+An easy-to-use helper to directly upload files from request to your models' media collections
 
-## Support us
+```php
+use Pinpon\Uploader\MediaUploader
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/simple-uploader.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/simple-uploader)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+MediaUploader::upload(['image'])->to($model);
+```
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require pinpon/simple-uploader
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="simple-uploader-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="simple-uploader-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="simple-uploader-views"
+composer require pinpon/laravel-medialibrary-uploader
 ```
 
 ## Usage
 
+**Warning:** The request file key must match the media collection's name
+
 ```php
-$uploader = new PinPon\Uploader();
-echo $uploader->echoPhrase('Hello, PinPon!');
+use Pinpon\Uploader\MediaUploader
+
+$model = Model::first();
+
+// Upload from one key
+MediaUploader::upload('image')->to($model);
+
+// Upload from multiple keys
+MediaUploader::upload(['image', 'banner'])->to($model);
+
+
+$model->getMedia('image');
+$model->getMedia('banner');
 ```
 
 ## Testing
